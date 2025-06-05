@@ -233,9 +233,9 @@
   <h1>🚂 ÖBB-Train-Race</h1>
 
   <div id="controls">
-    <input type="text" id="nameInput" placeholder="Name des Mitarbeiters" autocomplete="off" />
-    <button onclick="addTrain()">Hinzufügen</button>
-    <button onclick="startRace()">Zugrennen starten</button>
+    <input type="text" id="nameInput" placeholder="Name" autocomplete="off" />
+    <button onclick="addTrain()">Add</button>
+    <button onclick="startRace()">Start race</button>
     <!-- <button onclick="resetTrains()">Züge zurücksetzen</button> -->
   </div>
 
@@ -245,8 +245,8 @@
   <table id="nameTable">
     <thead>
       <tr>
-        <th>Mitarbeiter</th>
-        <th>Aktion</th>
+        <th>Name</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody id="nameTableBody"></tbody>
@@ -255,7 +255,7 @@
   <!-- Gewinner Overlay -->
   <div id="winnerOverlay">
     <div id="winnerText"></div>
-    <button onclick="closeWinner()">Nochmal</button>
+    <button onclick="closeWinner()">Again</button>
   </div>
 
   <script>
@@ -326,7 +326,7 @@
 
     function startRace() {
       if (trains.length === 0) {
-        alert("Bitte mindestens einen Mitarbeiter hinzufügen!");
+        alert("Please add at least one name");
         return;
       }
 
